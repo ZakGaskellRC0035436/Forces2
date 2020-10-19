@@ -68,12 +68,13 @@ namespace Forces2
         {
             try
             {
+                //read values for force and angle from textboxes
                 double Force = double.Parse(textBox1.Text);
                 double Angle = double.Parse(textBox2.Text);
-
+                //calculate Fx and Fy using equations Fx = Fcos and Fy = Fsin
                 double Fx = Force * cos(Angle);
                 double Fy = Force * sin(Angle);
-
+                //Output solutions to label1 amd label2
                 label1.Text = "Fx = " + Fx;
                 label2.Text = "Fy = " + Fy;
             }
