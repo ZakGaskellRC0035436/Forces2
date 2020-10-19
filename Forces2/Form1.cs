@@ -66,6 +66,7 @@ namespace Forces2
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            //use try-catch to avoid input errors
             try
             {
                 //read values for force and angle from textboxes
