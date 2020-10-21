@@ -85,5 +85,51 @@ namespace Forces2
             }
 
         }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //use try-catch to avoid input errors
+            try
+            {
+                //read values for force and angle from textboxes
+                double Fx = double.Parse(textBox3.Text);
+                double Fy = double.Parse(textBox4.Text);
+                //calculate Fx and Fy using equations Fx = Fcos and Fy = Fsin
+                double Force = Math.Sqrt(Fx * Fx + Fy * Fy);
+                double Angle = atan(Fy/Fx);
+                //Output solutions to label1 amd label2
+                label5.Text = "Angle = " + Angle;
+                label6.Text = "Force = " + Force;
+            }
+            catch
+            {
+                MessageBox.Show("Error on imput");
+            }
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
